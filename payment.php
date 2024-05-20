@@ -11,15 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $dbname = 'iPMS-clients';
     $link = mysqli_connect('localhost', 'root', '', $dbname);
 
-    $selectedOption = $_POST['disable'];
-    $mode = ($selectedOption === 'enable') ? 't' : 'f';
-
-    // Sanitize mode value    
-    $mode = mysqli_real_escape_string($link, $mode);
-
-    if (!$link) {
-        die("Connection failed: " . mysqli_connect_error());
-    }
+    
 
     // Update the 'mode' column in the 'clients' table
     $sql = "UPDATE clients SET mode = '$mode' WHERE name = '$client'";
