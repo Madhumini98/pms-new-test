@@ -1,0 +1,49 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "in-image out-image"
+        "Payment-Data Payment-Data";
+}
+
+.Payment-Data {
+    grid-area: Payment-Data;
+}
+
+.in-image {
+    grid-area: in-image;
+}
+
+.out-image {
+    grid-area: out-image;
+}
+
+
+html,
+body,
+.container {
+    height: 100%;
+    margin: 0;
+}
+
+/* For presentation only, no need to copy the code below */
+
+.container * {
+    border: 1px solid red;
+    position: relative;
+}
+
+.container *:after {
+    content: attr(class);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}

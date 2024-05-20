@@ -1,0 +1,10 @@
+node_modules
+.idea
+.vscode
+*.pdf
+*-i.jpg
+images/notRegister/slt/*
+*-o.jpg
+images/slt/*
+package-lock.json
+*.z

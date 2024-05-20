@@ -1,0 +1,7 @@
+{
+  "name": "pms-new",
+  "version": "1.0.0",
+  "dependencies": {
+    "gridjs": "^6.0.6"
+  }
+}

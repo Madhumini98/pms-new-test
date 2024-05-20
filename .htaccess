@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteBase var/www/html/pms-new
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
